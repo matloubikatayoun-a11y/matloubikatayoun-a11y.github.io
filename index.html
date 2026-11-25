@@ -749,6 +749,19 @@ main p.films{text-align:start}
 .chips3 span,.internal2 li{white-space:normal;max-width:100%;min-width:0}.about3>div{min-width:0}
 /* v26: parchment for every visitor, also in system dark mode */
 .tx mark{box-shadow:inset 0 -.42em 0 rgba(110,31,36,.14)!important}
+/* v27: photo on the left at a standard 4:5 size, titles one per line */
+.hero-grid{grid-template-columns:auto minmax(0,1fr);align-items:start}
+.pcol{width:clamp(210px,20vw,260px)}
+.pcol .portrait img{aspect-ratio:4/5;object-fit:cover;object-position:50% 16%}
+.st-pill{display:block;line-height:1.9;background:none;border:0;padding:0}
+.st-pill .dot{display:none}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.pcol .portrait{width:min(56vw,210px)}.st-pill{text-align:center}}
+.pcol .portrait{aspect-ratio:auto!important;height:auto!important;overflow:hidden}
+.pcol .portrait picture{display:block}
+html[dir="rtl"] .hero-grid{grid-template-columns:minmax(0,1fr) auto}
+html[dir="rtl"] .hero-grid>.pcol{order:2}
+@media (max-width:820px){.pcol .portrait{margin-inline:auto}html[dir="rtl"] .hero-grid{grid-template-columns:1fr}html[dir="rtl"] .hero-grid>.pcol{order:-1}}
+@media (max-width:820px){.hero-grid>.pcol{width:100%;justify-self:stretch;align-items:center}.pcol .portrait{width:min(58vw,220px)!important}}
 </style>
 </head>
 <body>
@@ -757,23 +770,24 @@ main p.films{text-align:start}
   <a class="mono" href="#top" aria-label="Katayoun Matloubi">K<i aria-hidden="true">·</i>M</a>
   <nav aria-label="Main navigation"><ul class="menu-list" id="menu"><li><a href="#research">Research</a></li><li><a href="#publications">Publications</a></li><li><a href="#teaching">Teaching</a></li><li><a href="#experience">Experience</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></nav>
   <div class="nav-right">
-    <a class="pillbtn email-btn" href="cv/Katayoun_Matloubi_CV.pdf" target="_blank" rel="noopener">CV</a>
     <nav class="lang-switch" aria-label="Language"><a href="./" lang="en" hreflang="en" aria-current="page">EN</a><a href="fr/" lang="fr" hreflang="fr">FR</a><a href="fa/" lang="fa" hreflang="fa">فا</a></nav>
     <button class="pillbtn burger" id="burger" aria-expanded="false" aria-controls="menu" data-open="Menu" data-close="Close">Menu</button>
   </div>
 </div></header>
 <main id="main">
   <section class="hero" id="top"><div class="w">
-    <div class="hero-grid"><div>
-      <div class="status"><span class="st-pill"><span class="dot" aria-hidden="true"></span>Research Associate, University of Michigan–Dearborn · Part-Time Faculty, History, Washtenaw Community College</span></div>
+    <div class="hero-grid">
+    <div class="pcol"><div class="portrait"><picture><source type="image/webp" srcset="assets/portrait-300.webp 300w, assets/portrait-600.webp 600w" sizes="(max-width:820px) 170px, 290px"><img src="assets/portrait.jpg" alt="Katayoun Matloubi" fetchpriority="high" width="900" height="1238"></picture></div>
+      <ul class="pcontact" aria-label="Contact"><li><a href="mailto:matloubi@umich.edu" dir="ltr">matloubi@umich.edu</a></li><li><a href="cv/Katayoun_Matloubi_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li><li><a href="https://orcid.org/0009-0007-8372-7887" target="_blank" rel="noopener">ORCID</a></li><li><a href="https://scholar.google.com/citations?user=vhw_WDMAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li><li><a href="https://www.linkedin.com/in/katayounmatloubi" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    <div>
+      <div class="status"><span class="st-pill"><span class="dot" aria-hidden="true"></span>Part-Time Faculty, History, Washtenaw Community College<br>Research Associate, Inclusive History Project, University of Michigan–Dearborn<br>Research Associate, Hadassah-Brandeis Institute, Brandeis University</span></div>
       <h1 class="name"><span><i>Katayoun</i></span> <span><i>Matloubi</i></span></h1>
       <p class="fa" lang="fa" style="text-align:start">کتایون مطلوبی</p>
       <p class="intro">My research examines indirect forms of Holocaust representation: the place of silence and absence in literature and film, the history of Iran’s Jews and the refugees who passed through Iran, and how testimony changes as it moves between languages.</p>
       <p class="line">My work draws on archival research, close reading, oral history and translation. One question runs through it: what can literature and film convey about violence when direct representation risks the illusion of complete knowledge?</p>
-      <div class="hero-btns"><a class="pillbtn solid" href="cv/Katayoun_Matloubi_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a><a class="pillbtn" href="#contact">Contact</a></div>
+      <div class="hero-btns"><a class="pillbtn" href="#contact">Contact</a></div>
     </div>
-    <div class="pcol"><div class="portrait"><picture><source type="image/webp" srcset="assets/portrait-300.webp 300w, assets/portrait-600.webp 600w" sizes="(max-width:820px) 170px, 290px"><img src="assets/portrait.jpg" alt="Katayoun Matloubi" fetchpriority="high" width="900" height="1238"></picture></div>
-      <ul class="pcontact" aria-label="Contact"><li><a href="mailto:matloubi@umich.edu" dir="ltr">matloubi@umich.edu</a></li><li><a href="cv/Katayoun_Matloubi_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li><li><a href="https://orcid.org/0009-0007-8372-7887" target="_blank" rel="noopener">ORCID</a></li><li><a href="https://scholar.google.com/citations?user=vhw_WDMAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li><li><a href="https://www.linkedin.com/in/katayounmatloubi" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div>
+    </div>
     <div class="areas"><span class="lab">Research areas</span><div class="area"><span class="n">01</span><b>Holocaust representation and memory</b></div><div class="area"><span class="n">02</span><b>Iranian Jewish history</b></div><div class="area"><span class="n">03</span><b>Multilingual testimony and translation</b></div></div>
     <div class="facts"><span>Ph.D., Contemporary French Literature and Francophone Studies, University of Connecticut, 2025</span><span>Research Associate, Hadassah-Brandeis Institute, Brandeis University</span><span>Ann Arbor, Michigan</span></div>
     <p class="affil"><b>Fellowships and research programs</b>United States Holocaust Memorial Museum · Hadassah-Brandeis Institute · USC Shoah Foundation · Trans-Atlantic Summer Institute, University of Minnesota · Dodd Center for Human Rights</p>
@@ -811,7 +825,6 @@ main p.films{text-align:start}
 
   <section class="sec" id="about"><div class="w"><div class="sh"><span class="num">08</span><h2>About</h2></div>
     <div class="about3"><div><div class="bio"><p>I am a scholar of Holocaust and memory studies, Iranian Jewish history, and transnational Middle Eastern Jewish experience.</p><p>I bring French- and Persian-language research, translation, oral-history methods, and museum education to questions of Jewish testimony and belonging. My dissertation at the University of Connecticut, advised by Roger Célestin, is the basis of my book manuscript.</p><p>I trained in French language and literature at the University of Tabriz and Shahid Beheshti University before my doctorate. I received the University of Connecticut’s Patti Parlette Peace Prize in 2023.</p></div>
-      <div class="cvbox"><p>The full CV lists every appointment, publication, talk, grant, and training program.</p><a class="pillbtn solid" href="cv/Katayoun_Matloubi_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></div>
       <div style="margin-top:32px"><h3>Areas and methods</h3><div class="chips3"><span>Holocaust and genocide studies</span><span>Iranian Jews in wartime France</span><span>Vichy internment, nationality, and minority status</span><span>Testimony and oral history</span><span>French and Francophone literature and film</span><span>Translation studies and digital humanities</span><span>Archival research (USHMM French police microfilm)</span><span>Close reading and film analysis</span><span>French/Persian source analysis and testimony comparison</span></div></div></div>
     <div class="side3"><div><h3>Education</h3><div class="ed3"><i>2025</i><div><b>Ph.D., Contemporary French Literature and Francophone Studies</b><span>University of Connecticut · dissertation advisor: Roger Célestin</span></div></div><div class="ed3"><i>2025</i><div><b>Graduate Certificate in Human Rights</b><span>University of Connecticut</span></div></div><div class="ed3"><i>2018</i><div><b>M.A., French Literature</b><span>Shahid Beheshti University, Tehran · thesis on Annie Ernaux</span></div></div><div class="ed3"><i>2015</i><div><b>B.A., French Language and Literature</b><span>University of Tabriz</span></div></div></div><div><h3>Languages</h3><div class="langs"><div class="lang"><b>Azərbaycanca</b><span>Azeri · native</span></div><div class="lang"><b>فارسی</b><span>Persian · native-level (bilingual)</span></div><div class="lang"><b>Français</b><span>French · near-native; research, teaching, publication</span></div><div class="lang"><b>English</b><span>English · full professional proficiency</span></div><div class="lang"><b>Osmanlıca</b><span>Ottoman Turkish · full professional proficiency</span></div><div class="lang"><b>العربية</b><span>Arabic · reading</span></div></div></div></div></div>
     <div class="figs about-f"><figure><picture><source type="image/webp" srcset="assets/photos/museum-event-2024-400.webp 400w, assets/photos/museum-event-2024-800.webp 800w" sizes="(max-width:700px) 92vw, 1100px"><img src="assets/photos/museum-event-2024.jpg" alt="Katayoun Matloubi with three colleagues in a museum gallery" loading="lazy" width="854" height="1280"></picture><figcaption>With colleagues, June 2024.</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/photos/dodd-center-700.webp 700w, assets/photos/dodd-center-1400.webp 1400w" sizes="(max-width:700px) 92vw, 1100px"><img src="assets/photos/dodd-center.jpg" alt="Group photograph in front of the Dodd Center for Human Rights" loading="lazy" width="1400" height="688"></picture><figcaption>Dodd Center for Human Rights, University of Connecticut.</figcaption></figure></div></div></section>
@@ -819,7 +832,7 @@ main p.films{text-align:start}
 <footer class="contact" id="contact"><div class="w">
   <p class="big">Let’s connect</p><p class="lead">For research collaboration, guest lectures, seminars, film discussions, and museum or public humanities projects.</p>
   <div class="crow"><span class="email" id="email" dir="ltr">matloubi@umich.edu</span><button class="pillbtn" id="copy" type="button" data-done="Copied">Copy email</button></div>
-  <div class="socials"><a class="pillbtn" href="mailto:matloubi@umich.edu">Write an email</a><a class="pillbtn" href="cv/Katayoun_Matloubi_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a><a class="pillbtn" href="https://orcid.org/0009-0007-8372-7887" target="_blank" rel="noopener">ORCID ↗</a><a class="pillbtn" href="https://www.linkedin.com/in/katayounmatloubi" target="_blank" rel="noopener">LinkedIn ↗</a><a class="pillbtn" href="https://scholar.google.com/citations?user=vhw_WDMAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a></div>
+  <div class="socials"><a class="pillbtn" href="mailto:matloubi@umich.edu">Write an email</a><a class="pillbtn" href="https://orcid.org/0009-0007-8372-7887" target="_blank" rel="noopener">ORCID ↗</a><a class="pillbtn" href="https://www.linkedin.com/in/katayounmatloubi" target="_blank" rel="noopener">LinkedIn ↗</a><a class="pillbtn" href="https://scholar.google.com/citations?user=vhw_WDMAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a></div>
   <div class="foot"><span>© 2026 Katayoun Matloubi</span><span class="langs-foot"><a href="./" lang="en">English</a><a href="fr/" lang="fr">Français</a><a href="fa/" lang="fa">فارسی</a></span><a href="#top">Back to top ↑</a></div>
 </div></footer>
 <script>
