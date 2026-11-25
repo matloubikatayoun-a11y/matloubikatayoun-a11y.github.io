@@ -584,6 +584,13 @@ html[dir="rtl"] .affil b{font-family:var(--fa);text-transform:none;letter-spacin
 .blk h3.bh{margin:0;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:-.025em;line-height:1.2;color:var(--acc-ink);padding-bottom:10px;border-bottom:1px solid var(--ink)}
 html[dir="rtl"] .blk h3.bh{font-family:var(--fa);letter-spacing:0}
 .portrait picture{display:contents}
+.pcol{display:flex;flex-direction:column;gap:16px;width:clamp(190px,22vw,290px)}
+.pcol .portrait{width:100%;margin-top:0}
+.pcontact{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:14.5px;line-height:1.35}
+.pcontact a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px}
+.pcontact a:hover{text-decoration-color:var(--ink)}
+.pcontact li:first-child a{font-weight:600;text-decoration:none}
+@media (max-width:820px){.pcol{order:-1;width:auto}.pcol .portrait{width:170px}.pcontact{flex-direction:row;flex-wrap:wrap;gap:6px 16px}.pcontact li:first-child{flex-basis:100%}}
 .course .syl{display:block;width:fit-content;margin-top:4px;font-size:13.5px;font-weight:600;color:var(--ink)}
 </style>
 </head>
@@ -608,7 +615,8 @@ html[dir="rtl"] .blk h3.bh{font-family:var(--fa);letter-spacing:0}
       <p class="line">My work draws on archival research, close reading, oral history and translation. One question runs through it: what can literature and film convey about violence when direct representation risks the illusion of complete knowledge?</p>
       <div class="hero-btns"><a class="pillbtn solid" href="cv/Katayoun_Matloubi_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a><a class="pillbtn" href="#contact">Contact</a></div>
     </div>
-    <div class="portrait"><picture><source type="image/webp" srcset="assets/portrait-300.webp 300w, assets/portrait-600.webp 600w" sizes="(max-width:700px) 136px, 290px"><img src="assets/portrait.jpg" alt="Katayoun Matloubi" fetchpriority="high" width="900" height="1238"></picture></div></div>
+    <div class="pcol"><div class="portrait"><picture><source type="image/webp" srcset="assets/portrait-300.webp 300w, assets/portrait-600.webp 600w" sizes="(max-width:820px) 170px, 290px"><img src="assets/portrait.jpg" alt="Katayoun Matloubi" fetchpriority="high" width="900" height="1238"></picture></div>
+      <ul class="pcontact" aria-label="Contact"><li><a href="mailto:matloubi@umich.edu" dir="ltr">matloubi@umich.edu</a></li><li><a href="cv/Katayoun_Matloubi_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li><li><a href="https://orcid.org/0009-0007-8372-7887" target="_blank" rel="noopener">ORCID</a></li><li><a href="https://scholar.google.com/citations?user=vhw_WDMAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li><li><a href="https://www.linkedin.com/in/katayounmatloubi" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div>
     <div class="areas"><span class="lab">Research areas</span><div class="area"><span class="n">01</span><b>Holocaust representation and memory</b></div><div class="area"><span class="n">02</span><b>Iranian Jewish history</b></div><div class="area"><span class="n">03</span><b>Multilingual testimony and translation</b></div></div>
     <div class="facts"><span>Ph.D., Contemporary French Literature and Francophone Studies, University of Connecticut, 2025</span><span>Research Associate, Hadassah-Brandeis Institute, Brandeis University</span><span>Ann Arbor, Michigan</span></div>
     <p class="affil"><b>Fellowships and research programs</b>United States Holocaust Memorial Museum · Hadassah-Brandeis Institute · USC Shoah Foundation · Trans-Atlantic Summer Institute, University of Minnesota · Dodd Center for Human Rights</p>
