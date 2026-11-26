@@ -207,9 +207,10 @@ body.menu-open{overflow:hidden}
 /* affiliations strip */
 .affil{text-align:center}
 .affil .names{font-family:var(--serif);font-size:clamp(20px,2vw,25px);line-height:1.6;color:var(--ink);margin-top:18px;max-width:980px;margin-inline:auto}
+.affil .names{display:flex;flex-wrap:wrap;justify-content:center;row-gap:2px}
 .affil .names span{white-space:nowrap}
 .affil .names span:not(:last-child)::after{content:"·";color:var(--gold);margin-inline:14px}
-@media (max-width:640px){.affil .names span{white-space:normal;display:block}.affil .names span:not(:last-child)::after{content:none}}
+@media (max-width:640px){.affil .names{flex-direction:column;align-items:center}.affil .names span{white-space:normal;display:block}.affil .names span:not(:last-child)::after{content:none}}
 
 /* ───────── Research ───────── */
 .project{padding-block:clamp(56px,7vw,96px);border-top:1px solid var(--rule)}
@@ -382,3 +383,5 @@ body.menu-open{overflow:hidden}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:clamp(44px,6vw,72px);padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:var(--foot-muted)}
 @media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid>:first-child{grid-column:1/-1}}
 @media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
+.foot-langs a{margin-right:18px}
+.foot-langs a[lang="fa"]{font-family:var(--fa)}
